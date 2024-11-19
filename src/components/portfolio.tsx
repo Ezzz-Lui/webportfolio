@@ -6,7 +6,7 @@ import MongoDb from './icons/mongodb';
 import Express from './icons/express';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Home, Briefcase, FolderOpen, Award, Github, Linkedin, Mail, Twitter, Code, Server, Database, Globe, CheckCircle } from 'lucide-react';
+import { Home, Briefcase, FolderOpen, Award, Github, Linkedin, Mail, Twitter, Code, Server, Database, Globe, CheckCircle, X } from 'lucide-react';
 import MicrosoftAzure from './icons/azure';
 import Django from './icons/django';
 import Python from './icons/python';
@@ -119,6 +119,7 @@ const certifications = [
 
 export function Portfolio() {
   const [isClient, setIsClient] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -127,6 +128,9 @@ export function Portfolio() {
   if (!isClient) {
     return null; // O un spinner de carga, etc.
   }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 relative overflow-hidden">
@@ -138,6 +142,37 @@ export function Portfolio() {
       </div>
 
       {/* Header */}
+      <header className="bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-xl font-bold">Portfolio Web</div>
+            <nav className="hidden md:block">
+              <ul className="flex space-x-6">
+                <li><a href="#home" className="hover:text-gray-300 transition duration-300">Home</a></li>
+                <li><a href="#projects" className="hover:text-gray-300 transition duration-300">Projects</a></li>
+                <li><a href="#experience" className="hover:text-gray-300 transition duration-300">Experience</a></li>
+                <li><a href="#certifications" className="hover:text-gray-300 transition duration-300">Certifications</a></li>
+              </ul>
+            </nav>
+            <button className="md:hidden" onClick={toggleMenu}>
+              {isMenuOpen ? <X size={24} /> : <menu />}
+            </button>
+          </div>
+        </div>
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-sm">
+            <nav className="container mx-auto px-4 py-4">
+              <ul className="space-y-4">
+                <li><a href="#home" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Home</a></li>
+                <li><a href="#projects" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Projects</a></li>
+                <li><a href="#experience" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Experience</a></li>
+                <li><a href="#certifications" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Certifications</a></li>
+              </ul>
+            </nav>
+          </div>
+        )}
+      </header>
 
 
       <main className="container mx-auto px-4 py-12 relative z-10">
@@ -241,19 +276,15 @@ export function Portfolio() {
           <div className="col-span-full bg-gray-800 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50 mt-6">
             <h2 className="text-2xl font-bold mb-4 text-center text-gray-100">Contact</h2>
             <div className="flex justify-center space-x-8">
-              <motion.a href="#" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
+              <motion.a href="https://github.com/Ezzz-Lui" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
                 <Github size={32} />
                 <span className="mt-2">GitHub</span>
               </motion.a>
-              <motion.a href="#" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
+              <motion.a href="https://www.linkedin.com/in/lk-ramos/" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
                 <Linkedin size={32} />
                 <span className="mt-2">LinkedIn</span>
               </motion.a>
-              <motion.a href="#" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
-                <Twitter size={32} />
-                <span className="mt-2">Twitter</span>
-              </motion.a>
-              <motion.a href="#" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
+              <motion.a href="mailto:ogn.lui@gmail.com" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
                 <Mail size={32} />
                 <span className="mt-2">Email</span>
               </motion.a>
