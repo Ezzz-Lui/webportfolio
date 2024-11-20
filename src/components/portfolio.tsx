@@ -133,13 +133,10 @@ export function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 relative overflow-hidden">
-      {/* Background Shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-zinc-800/30 to-gray-700/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-gray-600/30 to-zinc-700/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/3 bg-gradient-to-r from-zinc-700/50 via-gray-800/40 to-white/10 rounded-full blur-3xl" />
-      </div>
+    <div className="min-h-screen text-gray-100 relative overflow-hidden bg-black">
+    {/* Fondo moderno */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
 
       {/* Header */}
       <header className="bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-md sticky top-0 z-50">
@@ -216,7 +213,7 @@ export function Portfolio() {
                   <p className="text-sm text-gray-300 mb-2">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="font-bold text-xs bg-gray-600 text-gray-200 px-2 py-1 rounded-full flex items-center">
+                      <span key={skillIndex} className="font-bold text-xs bg-gray-600 text-gray-200 px-3 py-2 rounded-full flex items-center">
                         {skill.icon}
                         <span className="ml-1">{skill.name}</span>
                       </span>
