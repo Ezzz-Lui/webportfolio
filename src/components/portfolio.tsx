@@ -139,7 +139,7 @@ export function Portfolio() {
       <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
 
       {/* Header */}
-      <header className="bg-gray-800 bg-opacity-50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+      <header className="bg-opacity-50 backdrop-blur-sm shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold">Portfolio Web</div>
@@ -177,7 +177,7 @@ export function Portfolio() {
           {/* Hero Section */}
           <motion.div
             id="home"
-            className="col-span-full bg-gray-800 rounded-3xl p-8 shadow-lg backdrop-blur-sm bg-opacity-50"
+            className="col-span-full rounded-3xl p-8 shadow-lg backdrop-blur-sm bg-opacity-50"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -199,13 +199,13 @@ export function Portfolio() {
           </motion.div>
 
           {/* Projects Grid */}
-          <div id="projects" className="col-span-full bg-gray-800 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
+          <div id="projects" className="col-span-full bg-zinc-950 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
             <h2 className="text-2xl font-bold mb-4 text-gray-100">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {projects.map((project, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-700 rounded-lg p-4 cursor-pointer"
+                  className="bg-zinc-800 rounded-lg p-4 cursor-pointer"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -213,7 +213,7 @@ export function Portfolio() {
                   <p className="text-sm text-gray-300 mb-2">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="font-bold text-xs bg-gray-600 text-gray-200 px-3 py-2 rounded-full flex items-center">
+                      <span key={skillIndex} className="font-bold text-xs bg-zinc-700 text-gray-200 px-3 py-2 rounded-full flex items-center">
                         {skill.icon}
                         <span className="ml-1">{skill.name}</span>
                       </span>
