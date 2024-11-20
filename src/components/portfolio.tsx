@@ -199,7 +199,7 @@ export function Portfolio() {
           </motion.div>
 
           {/* Projects Grid */}
-          <div id="projects" className="col-span-full bg-zinc-950 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
+          <div id="projects" className="col-span-full bg-zinc-900 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
             <h2 className="text-2xl font-bold mb-4 text-gray-100">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {projects.map((project, index) => (
@@ -231,14 +231,14 @@ export function Portfolio() {
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
-                  className="bg-zinc-700 rounded-lg p-4"
+                  className="bg-zinc-800 rounded-lg p-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <h3 className="font-semibold text-lg text-gray-100">{exp.title}</h3>
-                  <p className="text-sm text-gray-300">{exp.company} | {exp.period}</p>
-                  <p className="mt-2 text-sm text-gray-400">{exp.description}</p>
+                  <p className="font-semibold text-sm text-gray-300">{exp.company} | {exp.period}</p>
+                  <p className="mt-2 text-sm text-gray-300">{exp.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -251,7 +251,7 @@ export function Portfolio() {
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
-                  className="bg-zinc-700 rounded-lg p-4 flex items-start"
+                  className="bg-zinc-800 rounded-lg p-4 flex items-start"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
