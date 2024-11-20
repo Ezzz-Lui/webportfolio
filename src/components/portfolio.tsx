@@ -19,6 +19,10 @@ import Nextjs from './icons/nextjs';
 import PostgreSQL from './icons/postgresql';
 import PowerBI from './icons/powerbi';
 import Excel from './icons/excel';
+import Platzi from './icons/platzi'
+import Google from './icons/google'
+import Udemy from './icons/udemy'
+import Azure from './icons/azure2'
 
 const projects = [
   { 
@@ -27,7 +31,7 @@ const projects = [
     skills: [
       { name: 'Django', icon: <Django /> },
       { name: 'Python', icon: <Python /> },
-      { name: 'Azure', icon: <MicrosoftAzure /> },
+      { name: 'Azure', icon: <Azure /> },
       { name: 'TailwindCSS', icon: <TailwindCSS /> }
     ]
   },
@@ -48,7 +52,7 @@ const projects = [
       { name: 'NextJS', icon: <Nextjs/> },
       { name: 'Typescript', icon: <TypeScript /> },
       { name: 'Python', icon: <Python/> },
-      { name: 'Azure AI', icon: <MicrosoftAzure /> }
+      { name: 'Azure AI', icon: <Azure /> }
     ]
   },
   { 
@@ -95,25 +99,31 @@ const certifications = [
     name: 'Microsoft Certified: Azure AI Engineer Associate',
     issuer: 'Microsoft',
     date: 'October 2024',
-    icon: <Award size={24} />
+    icon: <MicrosoftAzure />
   },
   {
     name: 'DevOps',
     issuer: 'Platzi',
     date: 'March 2024',
-    icon: <Award size={24} />
+    icon: <Platzi />
   },
   {
     name: 'Cloud Digital Leader',
     issuer: 'Google Cloud x Platzi',
     date: 'March 2024',
-    icon: <Award size={24} />
+    icon: <Google />
   },
   {
     name: 'Microsoft Certified: Azure Developer Associate',
     issuer: 'Microsoft',
     date: 'January 2023',
-    icon: <Award />
+    icon: <MicrosoftAzure />
+  },
+  {
+    name: 'Master Python for Data Analyst',
+    issuer: 'Udemy',
+    date: 'December 2024',
+    icon: <Udemy />
   }
 ]
 

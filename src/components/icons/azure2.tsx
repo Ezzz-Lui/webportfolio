@@ -7,7 +7,7 @@ const MicrosoftAzureLogo = () => {
     <img
       src={cdnUrl}
       alt="Microsoft Azure Logo"
-      style={{ width: "3em", height: "2.5em" }} // Ajusta tamaño según sea necesario
+      style={{ width: "24px", height: "24px" }} // Ajusta tamaño según sea necesario
     />
   );
 };
