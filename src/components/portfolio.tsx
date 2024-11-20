@@ -189,7 +189,7 @@ export function Portfolio() {
               Technician with a background in Intelligent Computer Engineering, specialized in backend development, cloud services and a solid DevOps ecosystem. Experience in technologies such as NestJS, Azure and CI/CD, as well as database management such as PostgreSQL and SQL Server. Currently, with focus on cloud architecture, deployments with services and artificial intelligence solutions using Azure.
               </p>
               <motion.button
-                className="bg-gradient-to-r from-zinc-900 to-gray-800 text-white px-6 py-2 rounded-full font-semibold hover:from-zinc-800 hover:to-gray-700 transition duration-300"
+                className="bg-gradient-to-r from-zinc-900 to-zinc-800 text-white px-6 py-2 rounded-full font-semibold hover:from-zinc-800 hover:to-zinc-700 transition duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -225,13 +225,13 @@ export function Portfolio() {
           </div>
 
           {/* Professional Experience Section */}
-          <div id="experience" className="col-span-full md:col-span-2 bg-gray-800 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
+          <div id="experience" className="col-span-full md:col-span-2 bg-zinc-900 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
             <h2 className="text-2xl font-bold mb-4 text-gray-100">Professional Experience</h2>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-700 rounded-lg p-4"
+                  className="bg-zinc-700 rounded-lg p-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -245,13 +245,13 @@ export function Portfolio() {
           </div>
 
           {/* Professional Certifications Section */}
-          <div id="certifications" className="col-span-full md:col-span-1 bg-gray-800 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
+          <div id="certifications" className="col-span-full md:col-span-1 bg-zinc-900 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50">
             <h2 className="text-2xl font-bold mb-4 text-gray-100">Professional Certifications</h2>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-700 rounded-lg p-4 flex items-start"
+                  className="bg-zinc-700 rounded-lg p-4 flex items-start"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -270,7 +270,7 @@ export function Portfolio() {
           </div>
 
           {/* Contact Links */}
-          <div className="col-span-full bg-gray-800 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50 mt-6">
+          <div className="col-span-full bg-zinc-900 rounded-3xl p-6 shadow-lg backdrop-blur-sm bg-opacity-50 mt-6">
             <h2 className="text-2xl font-bold mb-4 text-center text-gray-100">Contact</h2>
             <div className="flex justify-center space-x-8">
               <motion.a href="https://github.com/Ezzz-Lui" whileHover={{ y: -3 }} className="text-gray-300 hover:text-gray-400 flex flex-col items-center">
