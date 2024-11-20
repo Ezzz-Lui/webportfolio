@@ -23,6 +23,8 @@ import Platzi from './icons/platzi'
 import Google from './icons/google'
 import Udemy from './icons/udemy'
 import Azure from './icons/azure2'
+import GitHub from './icons/github';
+import LinkedIn from './icons/linkedin'
 
 const projects = [
   { 
@@ -155,10 +157,10 @@ export function Portfolio() {
             <div className="text-xl font-bold">Portfolio Web</div>
             <nav className="hidden md:block">
               <ul className="flex space-x-6">
-                <li><a href="#home" className="hover:text-gray-300 transition duration-300">Home</a></li>
-                <li><a href="#projects" className="hover:text-gray-300 transition duration-300">Projects</a></li>
-                <li><a href="#experience" className="hover:text-gray-300 transition duration-300">Experience</a></li>
-                <li><a href="#certifications" className="hover:text-gray-300 transition duration-300">Certifications</a></li>
+                <li><a href="#home" className="font-semibold hover:text-gray-300 transition duration-300">Home</a></li>
+                <li><a href="#projects" className="font-semibold hover:text-gray-300 transition duration-300">Projects</a></li>
+                <li><a href="#experience" className="font-semibold hover:text-gray-300 transition duration-300">Experience</a></li>
+                <li><a href="#cv" className="font-semibold hover:text-gray-300 transition duration-300">CV</a></li>
               </ul>
             </nav>
             <button className="md:hidden" onClick={toggleMenu}>
@@ -174,7 +176,7 @@ export function Portfolio() {
                 <li><a href="#home" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Home</a></li>
                 <li><a href="#projects" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Projects</a></li>
                 <li><a href="#experience" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Experience</a></li>
-                <li><a href="#certifications" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>Certifications</a></li>
+                <li><a href="#certifications" className="block hover:text-gray-300 transition duration-300" onClick={toggleMenu}>CV</a></li>
               </ul>
             </nav>
           </div>
@@ -198,13 +200,20 @@ export function Portfolio() {
               <p className="mb-6 max-w-2xl text-gray-400">
               Technician with a background in Intelligent Computer Engineering, specialized in backend development, cloud services and a solid DevOps ecosystem. Experience in technologies such as NestJS, Azure and CI/CD, as well as database management such as PostgreSQL and SQL Server. Currently, with focus on cloud architecture, deployments with services and artificial intelligence solutions using Azure.
               </p>
-              <motion.button
-                className="bg-gradient-to-r from-zinc-900 to-zinc-800 text-white px-6 py-2 rounded-full font-semibold hover:from-zinc-800 hover:to-zinc-700 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Download CV
-              </motion.button>
+              <div className='space-x-4'>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <GitHub href='https://github.com/Ezzz-Lui'/>
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <LinkedIn />
+                </motion.button>
+              </div>
             </div>
           </motion.div>
 
